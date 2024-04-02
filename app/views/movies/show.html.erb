@@ -1,7 +1,8 @@
 <main>
   <h1>Informações Sobre o Filme</h1>
-  <img src="<%= @movie.poster %>" alt="Poster do filme">
+
   <ul>
+    <li><%= image_tag(@movie.small_poster) %></li>
     <li>Título: <%= @movie.title %></li>
     <li>Ano de Lançamento: <%= @movie.release_year %></li>
     <li>Lançado: <%= @movie.released? ? 'Sim' : 'Não'%></li>

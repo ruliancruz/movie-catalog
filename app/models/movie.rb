@@ -4,4 +4,10 @@ class Movie < ApplicationRecord
 
   belongs_to :director
   belongs_to :genre
+
+  has_one_attached :poster
+
+  def small_poster
+    self.poster.variant(resize_to_limit: [300, 300]) if self.poster.attached?
+  end
 end

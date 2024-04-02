@@ -23,8 +23,8 @@
   <%= form.label 'Gênero: ' %>
   <%= form.collection_select :genre_id, Genre.order(:name), :id, :name %>
 
-  <%= form.label 'Link da Imagem do Poster: ' %>
-  <%= form.text_field :poster %>
+  <%= form.label 'Poster do Filme: ' %>
+  <%= form.file_field :poster %>
 
   <%= form.label 'Rascunho: ' %>
   <%= form.check_box :draft_status, {}, "draft", "published" %>
