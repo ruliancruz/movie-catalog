@@ -1,0 +1,33 @@
+<%= form_with model: movie do |form| %>
+  <%= form.label 'Título: ' %>
+  <%= form.text_field :title %>
+
+  <%= form.label 'Ano de Lançamento: ' %>
+  <%= form.select :release_year, 1888..Date.current.year %>
+
+  <%= form.label 'Lançado: ' %>
+  <%= form.check_box :release_status, {}, "released", "not_released" %>
+
+  <%= form.label 'Sinopse: ' %>
+  <%= form.text_area :synopsis %>
+
+  <%= form.label 'País de Origem: ' %>
+  <%= form.text_field :country %>
+
+  <%= form.label 'Duração: ' %>
+  <%= form.number_field :duration %>
+
+  <%= form.label 'Diretor: ' %>
+  <%= form.collection_select :director_id, Director.order(:name), :id, :name %>
+
+  <%= form.label 'Gênero: ' %>
+  <%= form.collection_select :genre_id, Genre.order(:name), :id, :name %>
+
+  <%= form.label 'Link da Imagem do Poster: ' %>
+  <%= form.text_field :poster %>
+
+  <%= form.label 'Rascunho: ' %>
+  <%= form.check_box :draft_status, {}, "draft", "published" %>
+
+  <%= form.submit 'Salvar' %>
+<% end %>
