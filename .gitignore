@@ -51,11 +51,6 @@ node_modules/
 yarn-debug.log*
 .yarn-integrity
 
-# Ignore uploaded files in development
-/storage/*
-!/storage/.keep
-/public/uploads
-
 # Ignore all environment files (except templates).
 /.env*
 !/.env*.erb
@@ -64,11 +59,6 @@ yarn-debug.log*
 /tmp/pids/*
 !/tmp/pids/
 !/tmp/pids/.keep
-
-# Ignore storage (uploaded files in development and any SQLite databases).
-/tmp/storage/*
-!/tmp/storage/
-!/tmp/storage/.keep
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
